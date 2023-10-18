@@ -133,7 +133,7 @@ const projectList = [
 const experienceList = [
   {
     id: 0,
-    company: "Upwork",
+    company: "Webmasters Group",
     links: {
       website: "https://www.materiagris.com.py/",
       facebook: "https://www.facebook.com/codehubtn/",
@@ -142,7 +142,7 @@ const experienceList = [
   },
   {
     id: 1,
-    company: "Joker IT",
+    company: "JS Web Dev Ltd.",
     links: {
       website: "https://light-it.net/",
       facebook: "https://www.facebook.com/codehubtn/",
@@ -151,7 +151,7 @@ const experienceList = [
   },
   {
     id: 2,
-    company: "Lattelecom & MEMS",
+    company: "Consider It Solved",
     links: {
       website: "https://techbehemoths.com/",
       facebook: "https://www.facebook.com/codehubtn/",

@@ -115,6 +115,14 @@ const Menu = ({ homeIsActive }) => {
           label={t("menu_github")}
           onSetActive={() => spyHandleChange(3)}
         />
+        <StyledTab
+          component={AnimatedLink}
+          animate={controls}
+          custom={4}
+          to="contact"
+          label={t("menu_contact")}
+          onSetActive={() => spyHandleChange(4)}
+        />
       </StyledTabs>
       <ExtraWrapper>
         <motion.div custom={4} animate={controls}>
