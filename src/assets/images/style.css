@@ -1,0 +1,176 @@
+@-webkit-keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCircle {
+  0% {
+    stroke-dashoffset: 151px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes drawCheck {
+  0% {
+    stroke-dashoffset: 36px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#successAnimationCircle {
+  stroke-dasharray: 151px 151px;
+  stroke: #fff;
+}
+
+#successAnimationCheck {
+  stroke-dasharray: 36px 36px;
+  stroke: #fff;
+}
+
+#successAnimationResult {
+  fill: #fff;
+  opacity: 0;
+}
+
+#successAnimation.animated {
+  -webkit-animation: 1s ease-out 1.2s 1 both scaleAnimation;
+  animation: 1s ease-out 1.2s 1 both scaleAnimation;
+}
+#successAnimation.animated #successAnimationCircle {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 1.2s 1 both drawCircle,
+    0.3s linear 2.1s 1 both fadeOut;
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 1.2s 1 both drawCircle,
+    0.3s linear 2.1s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationCheck {
+  -webkit-animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 1.2s 1 both drawCheck,
+    0.3s linear 2.1s 1 both fadeOut;
+  animation: 1s cubic-bezier(0.77, 0, 0.175, 1) 1.2s 1 both drawCheck,
+    0.3s linear 2.1s 1 both fadeOut;
+}
+#successAnimation.animated #successAnimationResult {
+  -webkit-animation: 0.3s linear 2.1s both fadeIn;
+  animation: 0.3s linear 2.1s both fadeIn;
+}
+
+.wave,
+.wave::before,
+.wave::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 250vw;
+  height: 270vw;
+  margin-left: -125vw;
+  transform-origin: 50% 50% !important;
+  background-color: transparent;
+  border-radius: 38% 42%;
+  box-shadow: inset 0 0 10vw rgba(47, 47, 47, 0.452) !important;
+  -webkit-box-shadow: inset 0 0 10vw rgba(47, 47, 47, 0.452) !important;
+  animation: spin 76s infinite linear;
+  mix-blend-mode: normal !important;
+  z-index: -1;
+}
+
+.wave::before {
+  width: 105%;
+  height: 95%;
+  margin-top: -105vw;
+  transform-origin: 49% 51% !important;
+  border-radius: 40% 38%;
+  box-shadow: inset 0 0 10vw rgba(47, 47, 47, 0.452) !important;
+  -webkit-box-shadow: inset 0 0 10vw rgba(47, 47, 47, 0.452) !important;
+  animation: spin 73s infinite linear;
+}
+
+.wave::after {
+  width: 102%;
+  height: 95%;
+  margin-top: -105vw;
+  transform-origin: 51% 49% !important;
+  border-radius: 48% 42%;
+  box-shadow: inset 0 0 10vw rgba(47, 47, 47, 0.452) !important;
+  -webkit-box-shadow: inset 0 0 10vw rgba(47, 47, 47, 0.452) !important;
+  animation: spin 10s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.MuiCardMedia-root img {
+  object-fit: cover;
+}
+.MuiPaper-root {
+  border-radius: 10px !important;
+  overflow: hidden;
+}
