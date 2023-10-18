@@ -80,7 +80,7 @@ const Home = () => {
           </Typography>
         </div>
         <motion.div animate={controls} custom={5}>
-          {/* <Button
+          <Button
             component={Link}
             spy
             smooth
@@ -93,7 +93,7 @@ const Home = () => {
             style={{ fontWeight: "bold", fontSize: "20px" }}
           >
             {t("home_contact_btn")}
-          </Button> */}
+          </Button>
         </motion.div>
       </div>
     </HomeContainer>
